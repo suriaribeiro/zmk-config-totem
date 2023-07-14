@@ -30,7 +30,20 @@
   tapping-term-ms = <170>;
 };
 
-/ combos {
+/ {
+    macros {
+        gif: gif {
+            label = "giphy";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp G &kp I &kp F>
+                ;
+        };
+     combos {
         compatible = "zmk,combos";
 
         #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
@@ -38,7 +51,7 @@
                 timeout-ms = <TIMEOUT>; \
                 bindings = <BINDINGS>; \
                 key-positions = <KEYPOS>; \
-              };
+	};
 
         /*                KEY POSITIONS
 
@@ -58,22 +71,9 @@
 	COMBO(BACKSLASH, &kp BACKSLASH, 26 27, 60)
 	COMBO(RIGHT_PARENTHESIS, &kp RIGHT_PARENTHESIS, 7 8, 60) 
 	COMBO(RIGHT_BRACKET, &kp RIGHT_BRACKET, 27 28, 60)
-        COMBO(MINUS, &kp MINUS, 31 34, 60)
- 	
-    }; 
+        COMBO(MINUS, &kp MINUS, 31 34, 60) 
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>
-                ;
-        };
+
     };
 
         keymap {
