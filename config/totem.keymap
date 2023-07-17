@@ -24,19 +24,37 @@
 };
 
 / {
-     combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
-            combo_tvp {
-                timeout-ms = <100>;
-                key-positions = <11 12 13>;
-                bindings = <&tog TVP1>;
-            };
+    combos {
+        compatible = "zmk,combos";
+
+        #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+              combo_##NAME { \
+                timeout-ms = <TIMEOUT>; \
+                bindings = <BINDINGS>; \
+                key-positions = <KEYPOS>; \
+              };
+
+        /*                KEY POSITIONS
+
+          ╭────────────────────╮ ╭────────────────────╮
+          │  0   1   2   3   4 │ │  5   6   7   8   9 │
+          │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+        20  21  22  23  24  25 │ │ 26  27  28  29  30  31 │
+          ╰───────╮ 32  33  34 │ │ 35 36  37  ╭───────╯
+                  ╰────────────╯ ╰────────────╯        */
+	
+	COMBO(caps_word, &caps_word, 4 5, 60) 
+	COMBO(LEFT_PARENTHESIS, &kp LEFT_PARENTHESIS, 1 2, 60)
+	COMBO(RIGHT_PARENTHESIS, &kp RIGHT_PARENTHESIS, 7 8, 60) 
+	COMBO(LEFT_BRACKET, &kp LEFT_BRACKET, 22 23, 60)
+	COMBO(RIGHT_BRACKET, &kp RIGHT_BRACKET, 28 29, 60)
+	COMBO(GRAVE, &kp GRAVE, 2 3, 60)
+	COMBO(APOSTROPHE, &kp APOSTROPHE, 6 7, 60)
+	COMBO(ESC, &kp C_MUTE, 23 24, 60)
+	COMBO(BACKSLASH, &kp BACKSLASH, 27 28, 60)
+	COMBO(MINUS, &kp MINUS, 34 35, 60)
     };
+
 
     macros {
         gif: gif {
