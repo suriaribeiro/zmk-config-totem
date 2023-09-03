@@ -10,6 +10,14 @@
 #define TVP1 4
 #define TVP2 5
 
+
+#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+      combo_##NAME { \
+        timeout-ms = <TIMEOUT>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+      };
+
 &mt {
   quick-tap-ms = <100>;
   global-quick-tap;
@@ -20,13 +28,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
-              combo_##NAME { \
-                timeout-ms = <TIMEOUT>; \
-                bindings = <BINDINGS>; \
-                key-positions = <KEYPOS>; \
-              };
 	COMBO(caps_word, &caps_word, 4 5, 60) 
 	COMBO(LEFT_PARENTHESIS, &kp LEFT_PARENTHESIS, 1 2, 60)
 	COMBO(RIGHT_PARENTHESIS, &kp RIGHT_PARENTHESIS, 7 8, 60) 
