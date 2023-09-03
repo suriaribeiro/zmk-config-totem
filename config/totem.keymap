@@ -10,13 +10,13 @@
 #define TVP1 4
 #define TVP2 5
 
-
+/* 
 #define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
       combo_##NAME { \
         timeout-ms = <TIMEOUT>; \
         bindings = <BINDINGS>; \
         key-positions = <KEYPOS>; \
-      };
+      }; */
 
 &mt {
   quick-tap-ms = <100>;
