@@ -28,6 +28,11 @@
 / {
     combos {
         compatible = "zmk,combos";
+        combo_caps_word {
+        timeout-ms = 60;
+        bindings = &caps_word;
+        key-positions = 4 5;
+      };
 	COMBO(caps_word, &caps_word, 4 5, 60) 
 	COMBO(LEFT_PARENTHESIS, &kp LEFT_PARENTHESIS, 1 2, 60)
 	COMBO(RIGHT_PARENTHESIS, &kp RIGHT_PARENTHESIS, 7 8, 60) 
