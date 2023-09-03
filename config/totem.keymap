@@ -10,14 +10,6 @@
 #define TVP1 4
 #define TVP2 5
 
-/* 
-#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
-      combo_##NAME { \
-        timeout-ms = <TIMEOUT>; \
-        bindings = <BINDINGS>; \
-        key-positions = <KEYPOS>; \
-      }; */
-
 &mt {
   quick-tap-ms = <100>;
   global-quick-tap;
@@ -33,16 +25,6 @@
         bindings = &caps_word;
         key-positions = 4 5;
       };
-/* 	COMBO(caps_word, &caps_word, 4 5, 60) 
-	COMBO(LEFT_PARENTHESIS, &kp LEFT_PARENTHESIS, 1 2, 60)
-	COMBO(RIGHT_PARENTHESIS, &kp RIGHT_PARENTHESIS, 7 8, 60) 
-	COMBO(LEFT_BRACKET, &kp LEFT_BRACKET, 22 23, 60)
-	COMBO(RIGHT_BRACKET, &kp RIGHT_BRACKET, 28 29, 60)
-	COMBO(GRAVE, &kp GRAVE, 2 3, 60)
-	COMBO(APOSTROPHE, &kp APOSTROPHE, 6 7, 60)
-	COMBO(ESC, &kp C_MUTE, 23 24, 60)
-	COMBO(BACKSLASH, &kp BACKSLASH, 27 28, 60)
-	COMBO(MINUS, &kp MINUS, 34 35, 60) */
     };
 
     macros {
