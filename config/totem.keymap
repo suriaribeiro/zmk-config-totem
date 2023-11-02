@@ -130,10 +130,10 @@
 
         nav_layer {
             bindings = <
-       &kp LG(Z)         &kp LG(X)  &kp LG(C)     &kp LG(V)  &kp LG(Y)        &kp CAPSLOCK  &none     &kp K_CUT  &kp K_COPY  &kp K_PASTE
-       &kp LEFT_CONTROL  &kp LALT   &kp LEFT_GUI  &kp LSHFT  &kp PAGE_UP      &kp LEFT      &kp DOWN  &kp UP     &kp RIGHT   &trans
-&none  &trans            &trans     &trans        &trans     &kp PAGE_DOWN    &kp INSERT    &kp HOME  &kp PG_UP  &kp PG_DN   &kp END      &none
-                                    &trans        &trans     &trans           &kp RET       &kp BKSP  &kp DEL
+       &kp LG(Z)         &kp LG(X)  &kp LG(C)     &kp LG(V)  &kp LG(Y)         &kp CAPSLOCK  &none     &kp K_CUT  &kp K_COPY  &kp K_PASTE
+       &kp LEFT_CONTROL  &kp LALT   &kp LEFT_GUI  &kp LSHFT  &kp UP_ARROW      &kp LEFT      &kp DOWN  &kp UP     &kp RIGHT   &trans
+&none  &trans            &trans     &trans        &trans     &kp DOWN_ARROW    &kp INSERT    &kp HOME  &kp PG_UP  &kp PG_DN   &kp END      &none
+                                    &trans        &trans     &trans            &kp RET       &kp BKSP  &kp DEL
             >;
         };
 
