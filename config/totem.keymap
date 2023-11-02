@@ -65,7 +65,7 @@
 
         minusCombo {
             bindings = <&kp MINUS>;
-            key-positions = <32 35>;
+            key-positions = <34 35>;
             layers = <0>;
         };
 
