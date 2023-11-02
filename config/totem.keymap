@@ -30,27 +30,6 @@
     combos {
         compatible = "zmk,combos";
 
-        cut {
-            bindings = <&kp LG(X)>;
-            key-positions = <1 3>;
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
-        copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <1 2>;
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
-        paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <2 3>;
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
         leftParet {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <6 7>;
@@ -73,20 +52,6 @@
             bindings = <&caps_word>;
             key-positions = <4 5>;
             layers = <0>;
-        };
-
-        undo {
-            bindings = <&kp LG(Z)>;
-            key-positions = <22 21>;
-            layers = <0>;
-            timeout-ms = <40>;
-        };
-
-        redo {
-            bindings = <&kp LG(Y)>;
-            key-positions = <23 22>;
-            layers = <0>;
-            timeout-ms = <40>;
         };
 
         printscreen {
@@ -166,10 +131,10 @@
 
         media_layer {
             bindings = <
-       &trans            &trans    &trans        &trans     &trans    &trans       &trans        &trans        &trans      &trans
-       &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &kp LSHFT  &trans    &kp K_PREV   &kp K_VOL_DN  &kp K_VOL_UP  &kp K_NEXT  &trans
-&none  &trans            &trans    &trans        &trans     &trans    &trans       &trans        &trans        &trans      &trans  &none
-                                   &trans        &trans     &trans    &kp K_STOP2  &kp K_PP      &kp K_MUTE
+       &trans            &trans    &trans        &trans     &trans    &trans      &trans        &trans        &trans      &trans
+       &kp LEFT_CONTROL  &kp LALT  &kp LEFT_GUI  &kp LSHFT  &trans    &kp C_PREV  &kp K_VOL_DN  &kp K_VOL_UP  &kp C_NEXT  &trans
+&none  &trans            &trans    &trans        &trans     &trans    &trans      &trans        &trans        &trans      &trans  &none
+                                   &trans        &trans     &trans    &kp C_STOP  &kp K_PP      &kp K_MUTE
             >;
         };
 
